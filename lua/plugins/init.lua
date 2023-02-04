@@ -238,4 +238,124 @@ return {
 		event = "VeryLazy",
 		enabled = vim.fn.has("win32") == 0,
 	},
+	{
+		"rcarriga/nvim-dap-ui",
+		dependencies = "mfussenegger/nvim-dap",
+		enabled = vim.fn.has("win32") == 0,
+		config = function()
+			require("config.dapui")
+		end,
+	},
+	{
+		"jayp0521/mason-nvim-dap.nvim",
+		event = "VeryLazy",
+		dependencies = { "williamboman/mason.nvim", "mfussenegger/nvim-dap" },
+		enabled = vim.fn.has("win32") == 0,
+		init = function()
+			require("config.mason_dap")
+		end,
+	},
+	-- style
+	-- dashboard
+	{
+		"goolord/alpha-nvim",
+		commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31",
+		event = "BufWinEnter",
+		config = function()
+			require("config.alpha")
+		end,
+	},
+	-- unutk line info dibawah
+	{
+		"nvim-lualine/lualine.nvim",
+		commit = "a52f078026b27694d2290e34efa61a6e4a690621",
+		dependencies = { "kyazdani42/nvim-web-devicons", opt = true },
+		event = "BufWinEnter",
+		opts = function()
+			require("config.lualine")
+		end,
+	},
+	-- for tree exploler
+	{
+		"kyazdani42/nvim-tree.lua",
+		commit = "7282f7de8aedf861fe0162a559fc2b214383c51c",
+		event = "BufWinEnter",
+		cmd = "NvimTreeToggle",
+		dependencies = "kyazdani42/nvim-web-devicons",
+		init = function()
+			require("config.nvim-tree")
+		end,
+	},
+	-- for file tab
+	{
+		"akinsho/bufferline.nvim",
+		commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4",
+		dependencies = { "kyazdani42/nvim-web-devicons", "famiu/bufdelete.nvim" },
+		event = "VeryLazy",
+	},
+	-- key mappings
+	{
+		"folke/which-key.nvim",
+		event = "BufWinEnter",
+		init = function()
+			require("config.whichkey")
+		end,
+	},
+	-- for resize screen
+	{
+		"mrjones2014/smart-splits.nvim",
+		event = "BufWinEnter",
+		config = function()
+			require("config.smartsplit")
+		end,
+	},
+	{
+		"nvim-telescope/telescope.nvim",
+		event = "VeryLazy",
+		commit = "76ea9a898d3307244dce3573392dcf2cc38f340f",
+		dependencies = { { "nvim-lua/plenary.nvim" } },
+		cmd = "Telescope",
+		init = function()
+			require("config.telescope")
+		end,
+	},
+	-- untuk integasi terminal
+	{
+		"akinsho/toggleterm.nvim",
+		commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda",
+		cmd = "Toggleterm",
+		event = "BufWinEnter",
+		init = function()
+			require("config.toggleterm")
+		end,
+	},
+	-- for popup alert
+	{
+		"rcarriga/nvim-notify",
+		event = "BufRead",
+		config = function()
+			local notify = require("notify")
+			notify.setup({ background_colour = "#000000" })
+			vim.notify = notify.notify
+		end,
+	},
+	-- untuk git
+	{
+		"lewis6991/gitsigns.nvim",
+		commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2",
+		enabled = vim.fn.executable("git") == 1,
+		ft = "gitcommit",
+		event = "VeryLazy",
+		config = function()
+			require("config.gitsigns")
+		end,
+	},
+	-- for popup input
+	{
+		"stevearc/dressing.nvim",
+		event = "BufWinEnter",
+		config = function()
+			require("config.dressing")
+		end,
+	},
 }
