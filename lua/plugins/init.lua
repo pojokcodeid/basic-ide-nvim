@@ -232,4 +232,10 @@ return {
 		end,
 	},
 	{ "williamboman/nvim-lsp-installer", event = "VeryLazy" },
+	-- debuging
+	{
+		"mfussenegger/nvim-dap",
+		event = "VeryLazy",
+		enabled = vim.fn.has("win32") == 0,
+	},
 }
