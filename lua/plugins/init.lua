@@ -17,9 +17,25 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		-- commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
-		run = ":TSUpdate",
-		event = "BufWinEnter",
-		opts = function()
+		cmd = {
+			"TSBufDisable",
+			"TSBufEnable",
+			"TSBufToggle",
+			"TSDisable",
+			"TSEnable",
+			"TSToggle",
+			"TSInstall",
+			"TSInstallInfo",
+			"TSInstallSync",
+			"TSModuleInfo",
+			"TSUninstall",
+			"TSUpdate",
+			"TSUpdateSync",
+		},
+		build = function()
+			require("nvim-treesitter.install").update({ with_sync = true })()
+		end,
+		config = function()
 			require("config.treesitter")
 		end,
 	},
@@ -141,13 +157,15 @@ return {
 		end,
 	},
 	-- for formater linter
-	{ "jose-elias-alvarez/null-ls.nvim", 
-		--commit = "c0c19f32b614b3921e17886c541c13a72748d450", 
-		event = "VeryLazy" 
+	{
+		"jose-elias-alvarez/null-ls.nvim",
+		--commit = "c0c19f32b614b3921e17886c541c13a72748d450",
+		event = "VeryLazy",
 	},
-	{ "RRethy/vim-illuminate", 
-		--commit = "a2e8476af3f3e993bb0d6477438aad3096512e42", 
-		event = "VeryLazy" 
+	{
+		"RRethy/vim-illuminate",
+		--commit = "a2e8476af3f3e993bb0d6477438aad3096512e42",
+		event = "VeryLazy",
 	},
 	{
 		"jayp0521/mason-null-ls.nvim",
