@@ -42,5 +42,6 @@
   "toggleterm.nvim": { "branch": "main", "commit": "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" },
   "tokyonight.nvim": { "branch": "main", "commit": "66bfc2e8f754869c7b651f3f47a2ee56ae557764" },
   "vim-illuminate": { "branch": "master", "commit": "a2e8476af3f3e993bb0d6477438aad3096512e42" },
+  "vim-startuptime": { "branch": "master", "commit": "5f52ed26e0296a3e1d1453935f417e5808eefab8" },
   "which-key.nvim": { "branch": "main", "commit": "16ed12a8493628c377606da2ebac50d80736ed37" }
 }

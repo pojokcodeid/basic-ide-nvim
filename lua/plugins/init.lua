@@ -311,4 +311,6 @@ return {
 			require("config.coderunner")
 		end,
 	},
+	-- for check startup time
+	{ "dstein64/vim-startuptime", cmd = "StartupTime", event = "VeryLazy" },
 }
