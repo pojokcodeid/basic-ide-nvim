@@ -226,6 +226,16 @@ return {
 		dependencies = { "kyazdani42/nvim-web-devicons", "famiu/bufdelete.nvim" },
 		event = "VeryLazy",
 	},
+	-- for winbar icon
+	{
+		"SmiteshP/nvim-navic",
+		dependencies = "neovim/nvim-lspconfig",
+		event = "BufRead",
+		config = function()
+			require("config.breadcrumb")
+			require("config.winbar")
+		end,
+	},
 	-- key mappings
 	{
 		"folke/which-key.nvim",

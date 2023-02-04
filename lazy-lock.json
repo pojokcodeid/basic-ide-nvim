@@ -28,6 +28,7 @@
   "nvim-dap-ui": { "branch": "master", "commit": "885e958ff9de30cfbc359259eccf28cc493ad46b" },
   "nvim-lsp-installer": { "branch": "main", "commit": "17e0bfa5f2c8854d1636fcd036dc8284db136baa" },
   "nvim-lspconfig": { "branch": "master", "commit": "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" },
+  "nvim-navic": { "branch": "master", "commit": "11e08391eeed00effa85ca24ff9d1e0472cbcd6a" },
   "nvim-notify": { "branch": "master", "commit": "bdd647f61a05c9b8a57c83b78341a0690e9c29d7" },
   "nvim-tree.lua": { "branch": "master", "commit": "7282f7de8aedf861fe0162a559fc2b214383c51c" },
   "nvim-treesitter": { "branch": "master", "commit": "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac" },
