@@ -206,7 +206,6 @@ return {
 	-- dashboard
 	{
 		"goolord/alpha-nvim",
-		commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31",
 		event = "BufWinEnter",
 		config = function()
 			require("config.alpha")
@@ -215,7 +214,6 @@ return {
 	-- unutk line info dibawah
 	{
 		"nvim-lualine/lualine.nvim",
-		commit = "a52f078026b27694d2290e34efa61a6e4a690621",
 		dependencies = { "kyazdani42/nvim-web-devicons", opt = true },
 		event = "BufWinEnter",
 		opts = function()
@@ -225,7 +223,6 @@ return {
 	-- for tree explorer
 	{
 		"kyazdani42/nvim-tree.lua",
-		commit = "7282f7de8aedf861fe0162a559fc2b214383c51c",
 		event = "BufWinEnter",
 		cmd = "NvimTreeToggle",
 		dependencies = "kyazdani42/nvim-web-devicons",
@@ -236,7 +233,6 @@ return {
 	-- for file tab
 	{
 		"akinsho/bufferline.nvim",
-		commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4",
 		dependencies = { "kyazdani42/nvim-web-devicons", "famiu/bufdelete.nvim" },
 		event = "VeryLazy",
 	},
