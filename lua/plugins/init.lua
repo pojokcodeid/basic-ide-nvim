@@ -117,6 +117,7 @@ return {
 		"RRethy/vim-illuminate",
 		event = "VeryLazy",
 	},
+	-- null-ls installer
 	{
 		"jayp0521/mason-null-ls.nvim",
 		dependencies = "jose-elias-alvarez/null-ls.nvim",
