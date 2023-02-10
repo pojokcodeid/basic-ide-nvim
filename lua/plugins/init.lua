@@ -79,49 +79,7 @@ return {
         { "<s-tab>", function() require("luasnip").jump(-1) end, mode = { "i", "s" } },
       },
 	},
-	-- auto pairs
-	{
-		"windwp/nvim-autopairs",
-		dependencies = "hrsh7th/nvim-cmp",
-		event = "VeryLazy",
-		init = function()
-			require("config.autopairs")
-		end,
-	},
-	-- comments
-	{ "JoosepAlviste/nvim-ts-context-commentstring" },
-	{
-		"numToStr/Comment.nvim",
-		event = "InsertEnter",
-		init = function()
-			require("config.comment")
-		end,
-	},
-	-- styleing indent
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		event = "BufRead",
-		init = function()
-			require("config.indentline")
-		end,
-	},
-	{
-		"lewis6991/impatient.nvim",
-		event = "VeryLazy",
-		init = function()
-			require("impatient").enable_profile()
-		end,
-	},
-	{
-		"hrsh7th/cmp-buffer",
-		event = "VeryLazy",
-		dependencies = "hrsh7th/nvim-cmp",
-	},
-	{
-		"hrsh7th/cmp-nvim-lua",
-		event = "VeryLazy",
-		dependencies = "hrsh7th/nvim-cmp",
-	},
+	-- lsp
 	{
 		"neovim/nvim-lspconfig",
 		event = "BufWinEnter",
@@ -168,6 +126,49 @@ return {
 		end,
 	},
 	{ "williamboman/nvim-lsp-installer", event = "VeryLazy" },
+	-- auto pairs
+	{
+		"windwp/nvim-autopairs",
+		dependencies = "hrsh7th/nvim-cmp",
+		event = "VeryLazy",
+		init = function()
+			require("config.autopairs")
+		end,
+	},
+	-- comments
+	{ "JoosepAlviste/nvim-ts-context-commentstring" },
+	{
+		"numToStr/Comment.nvim",
+		event = "InsertEnter",
+		init = function()
+			require("config.comment")
+		end,
+	},
+	-- styleing indent
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		event = "BufRead",
+		init = function()
+			require("config.indentline")
+		end,
+	},
+	{
+		"lewis6991/impatient.nvim",
+		event = "VeryLazy",
+		init = function()
+			require("impatient").enable_profile()
+		end,
+	},
+	{
+		"hrsh7th/cmp-buffer",
+		event = "VeryLazy",
+		dependencies = "hrsh7th/nvim-cmp",
+	},
+	{
+		"hrsh7th/cmp-nvim-lua",
+		event = "VeryLazy",
+		dependencies = "hrsh7th/nvim-cmp",
+	},
 	-- debuging
 	{
 		"mfussenegger/nvim-dap",
