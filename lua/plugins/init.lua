@@ -30,9 +30,10 @@ return {
 			"TSUpdate",
 			"TSUpdateSync",
 		},
-		build = function()
-			require("nvim-treesitter.install").update({ with_sync = true })()
-		end,
+		build = ":TSUpdate",
+		-- build = function()
+		-- 	require("nvim-treesitter.install").update({ with_sync = true })()
+		-- end,
 		config = function()
 			require("config.treesitter")
 		end,
