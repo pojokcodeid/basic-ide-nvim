@@ -15,6 +15,7 @@ return {
 	-- coloring
 	{
 		"nvim-treesitter/nvim-treesitter",
+		event = "BufRead",
 		cmd = {
 			"TSBufDisable",
 			"TSBufEnable",
@@ -41,7 +42,7 @@ return {
 	-- auto completion
 	{
 		"hrsh7th/nvim-cmp",
-		event = "InsertEnter",
+		event = "BufWinEnter",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
