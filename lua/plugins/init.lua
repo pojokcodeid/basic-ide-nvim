@@ -166,6 +166,7 @@ return {
 	-- 	event = "VeryLazy",
 	-- 	dependencies = "hrsh7th/nvim-cmp",
 	-- },
+	-- ini optional saja
 	{
 		"hrsh7th/cmp-nvim-lua",
 		event = "VeryLazy",
