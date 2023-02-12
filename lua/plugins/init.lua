@@ -153,6 +153,7 @@ return {
 			require("config.indentline")
 		end,
 	},
+	-- untuk mempercepat startup
 	{
 		"lewis6991/impatient.nvim",
 		event = "VeryLazy",
