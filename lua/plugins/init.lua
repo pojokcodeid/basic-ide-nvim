@@ -161,11 +161,11 @@ return {
 			require("impatient").enable_profile()
 		end,
 	},
-	{
-		"hrsh7th/cmp-buffer",
-		event = "VeryLazy",
-		dependencies = "hrsh7th/nvim-cmp",
-	},
+	-- {
+	-- 	"hrsh7th/cmp-buffer",
+	-- 	event = "VeryLazy",
+	-- 	dependencies = "hrsh7th/nvim-cmp",
+	-- },
 	{
 		"hrsh7th/cmp-nvim-lua",
 		event = "VeryLazy",
