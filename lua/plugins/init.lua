@@ -175,11 +175,12 @@ return {
 	-- debuging
 	{
 		"mfussenegger/nvim-dap",
-		event = "VeryLazy",
+		event = "BufWinEnter",
 		enabled = vim.fn.has("win32") == 0,
 	},
 	{
 		"rcarriga/nvim-dap-ui",
+		event = "BufWinEnter",
 		dependencies = "mfussenegger/nvim-dap",
 		enabled = vim.fn.has("win32") == 0,
 		config = function()
@@ -188,7 +189,7 @@ return {
 	},
 	{
 		"jayp0521/mason-nvim-dap.nvim",
-		event = "VeryLazy",
+		event = "BufWinEnter",
 		dependencies = { "williamboman/mason.nvim", "mfussenegger/nvim-dap" },
 		enabled = vim.fn.has("win32") == 0,
 		init = function()
