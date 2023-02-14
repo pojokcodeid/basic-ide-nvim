@@ -208,7 +208,7 @@ return {
 	},
 	-- for coloring pairs
 	-- config di treesitter
-	{ "p00f/nvim-ts-rainbow", event = "BufWinEnter", dependencies = "nvim-treesitter/nvim-treesitter" },
+	{ "p00f/nvim-ts-rainbow", event = "BufRead", dependencies = "nvim-treesitter/nvim-treesitter" },
 	-- style
 	-- dashboard
 	{
