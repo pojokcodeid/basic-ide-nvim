@@ -135,7 +135,7 @@ local mappings = {
 		"Find files",
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
-	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+	-- ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 	-- ["z"] = { "<cmd>Lazy<cr>", "Lazy" },
 
 	["/"] = {
@@ -144,11 +144,11 @@ local mappings = {
 		end,
 		"Coment line",
 	},
-	["m"] = {
-		name = "Markdown",
-		p = { "<cmd>MarkdownPreview<cr>", "Preview" },
-		s = { "<cmd>MarkdownPreviewStop<cr>", "Stop Preview" },
-	},
+	-- ["m"] = {
+	-- 	name = "Markdown",
+	-- 	p = { "<cmd>MarkdownPreview<cr>", "Preview" },
+	-- 	s = { "<cmd>MarkdownPreviewStop<cr>", "Stop Preview" },
+	-- },
 	-- p = {
 	-- 	name = "Packer",
 	-- 	c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -382,7 +382,7 @@ local mappings = {
 	-- },
 	d = debug_key,
 	p = {
-		name = "Plugins",
+		name = "Plugins (Lazy)",
 		i = { "<cmd>Lazy install<cr>", "Install" },
 		s = { "<cmd>Lazy sync<cr>", "Sync" },
 		S = { "<cmd>Lazy clear<cr>", "Status" },
